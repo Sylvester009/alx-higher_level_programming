@@ -9,20 +9,20 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *s;
+	listint_t *c;
 	listint_t *f;
 
 	if (!list)
 		return (0);
 
-	s = list;
+	c = list;
 	f = list->next;
-	while (f && s && f->next)
+	while (f && c && f->next)
 	{
-		s = s->next;
+		c = c->next;
 		f = f->next->next;
 		
-		if (s == f)
+		if (c == f)
 		{
 			return (1);
 		}
