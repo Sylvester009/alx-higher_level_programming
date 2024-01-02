@@ -9,22 +9,21 @@
 
 int check_cycle(listint_t *list)
 {
-struct listint_t *t;
-struct listint_t *h;
+struct listint_t *t, *j;
 
 t = list;
-h = list->next;
+j = list->next;
   
 if (!list)
 return (0);
 
-while (h && t && h->next)
+while (j && t && j->next)
 {
-if (t == h)
+if (t == j)
 {
 return (1);
 }
-h = h->next;
+j = j->next;
 t = t->next->next;
 }
 return (0);
