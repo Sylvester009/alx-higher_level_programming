@@ -9,9 +9,12 @@
 
 int check_cycle(listint_t *list)
 {
-struct listint_t *t = list;
-struct listint_t *h = list->next;
+struct listint_t *t;
+struct listint_t *h;
 
+*t = list;
+*h = list->next;
+  
 if (!list)
 return (0);
 
