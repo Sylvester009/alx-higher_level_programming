@@ -4,7 +4,7 @@ listint_t *reverse_list(listint_t **head);
 int is_palindrome(listint_t **head);
 
 /**
-* reverse_listint - Reverses a singly-linked listint_t list.
+* reverse_list - Reverses a singly-linked listint_t list.
 * @head: A pointer to the starting node
 *
 * Returns: A pointer to the head of the reversed list
