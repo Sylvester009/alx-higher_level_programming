@@ -35,17 +35,12 @@ return (*head);
 
 int is_palindrome(listint_t **head)
 {
-listint_t *slow_ptr, *fast_ptr, *tmp_node,
-*rev_half, *mid_node;
+listint_t  *tmp_node, *rev_half, *mid_node;
 size_t list_size = 0, i;
 
 /* Check for an empty list or a single-node list (palindrome by definition) */
 if (*head == NULL || (*head)->next == NULL)
 return (1);
-
-/* Initialize pointers for finding the middle */
-slow_ptr = *head;
-fast_ptr = *head;
 
 /* Calculate the size of the linked list and find the middle */
 tmp_node = *head;
