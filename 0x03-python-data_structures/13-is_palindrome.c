@@ -82,5 +82,5 @@ rev_half = rev_half->next;
 /* Reverse the second half back to its original order */
 reverse_list(&mid_node);
 
-return 1;
+return (1);
 }
