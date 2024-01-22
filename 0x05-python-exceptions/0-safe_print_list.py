@@ -8,8 +8,8 @@ Returns:
 number of elements printed
 """
 elem_number = 0
-try:
 for i in range(x):
+try:
 print("{}".format(my_list[i]), end="")
 elem_number += 1
 except IndexError:
