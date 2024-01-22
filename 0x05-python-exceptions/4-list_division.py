@@ -3,8 +3,8 @@
 def list_division(my_list_1, my_list_2, list_length):
     """divides element by element 2 lists.
     Args:
-        my_list_1 (list): 1st list that contain any type (integer, string, etc.).
-        my_list_2 (list): 2nd list that contain any type (integer, string, etc.).
+        my_list_1 (list): 1st list that contain any type (integer, string).
+        my_list_2 (list): 2nd list that contain any type (integer, string).
         list_length (int): The number of elements to divide.
     Returns:
        new list (length = list_length) with all divisions
