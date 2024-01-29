@@ -3,7 +3,12 @@
 
 
 class Rectangle:
-    """represents a rectangle class"""
+    """represents a rectangle class
+    args:
+    number_of_instances: Rectangle instances
+    """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """new Rectangle intialized.
@@ -11,6 +16,7 @@ class Rectangle:
             width: width of the new rectangle.
             height: height of the new rectangle.
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
