@@ -16,4 +16,5 @@ def to_json_string(my_obj):
     """
     import json
 
-    return json.dumps(myobj)
+    objrep = json.dumps(my_obj)
+    return objrep
