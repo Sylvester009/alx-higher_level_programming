@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """defines a class representing a square."""
 
