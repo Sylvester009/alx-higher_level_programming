@@ -86,6 +86,6 @@ class Base:
                     inst = cls.create(**data)
                     instances.append(inst)
         except FileNotFoundError:
-            pass
+            return []
 
             return instances
