@@ -91,4 +91,4 @@ class Base:
         except FileNotFoundError:
             return []
 
-            return instances
+        return instances
