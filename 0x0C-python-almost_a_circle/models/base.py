@@ -40,7 +40,7 @@ class Base:
         """
         if list_objs is None:
             list_objs = []
-            
+
         filename = '{}.json'.format(cls.__name__)
         with open(filename, 'w') as my_file:
             my_file.write(cls.to_json_string([obj.to_dictionary()
