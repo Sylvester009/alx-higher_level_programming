@@ -7,6 +7,8 @@ act as the base for the other
 classes in the project.
 """
 
+import json
+
 
 class Base:
     """
