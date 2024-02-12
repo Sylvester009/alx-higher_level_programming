@@ -92,3 +92,33 @@ class Base:
             return []
 
         return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serialize list of instances to a CSV file.
+        """
+        filename = '{}.csv'.format(cls.__name__)
+        with open(filename, 'w', newline='') as file:
+            writer = csv.writer(file)
+            for i in list_objs:
+                writer.writerow(i.to_csv_row())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize instances from a CSV file.
+        """
+        filename = '{}.csv'.format(cls.__name__)
+        instances = []
+
+        try:
+            with open(filename, 'r', newline='') as file:
+                reader = csv.reader(file)
+                for i in reader:
+                    inst = cls.create_from_csv_row(i)
+                    instances.append(inst)
+        except FileNotFoundError:
+            pass  # Return an empty list if the file doesn't exist
+
+        return instances
