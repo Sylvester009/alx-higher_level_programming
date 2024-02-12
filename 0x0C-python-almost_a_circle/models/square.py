@@ -39,12 +39,12 @@ class Square(Rectangle):
         """Return the string representation of the Square."""
         return "[Square] ({}) {}/{} - {}".format(
           self.id, self.x, self.y, self.width)
-            
+    
     def update(self, *args, **kwargs):
         """Adds public method that assigns attributes.
 
         Args:
-            *args: the list of arguments 
+            *args: the list of arguments
             **kwargs: a double pointer to a dictionary
         """
         if args:
