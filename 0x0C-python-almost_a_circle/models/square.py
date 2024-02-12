@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 # models/square.py
 
+"""
+class Square that inherits from Rectangle
+"""
+
 from models.rectangle import Rectangle
 
 
@@ -18,6 +22,7 @@ class Square(Rectangle):
             id (int, optional): Square ID. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     @property
     def size(self):
