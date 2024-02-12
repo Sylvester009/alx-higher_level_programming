@@ -29,8 +29,8 @@ class Square(Rectangle):
         """Setter for the size attribute."""
         self.width = value
         self.height = value
-
-  def __str__(self):
+        
+    def __str__(self):
         """Return the string representation of the Square."""
         return "[Square] ({}) {}/{} - {}".format(
           self.id, self.x, self.y, self.width)
