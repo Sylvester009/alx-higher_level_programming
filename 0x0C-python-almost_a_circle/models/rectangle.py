@@ -89,6 +89,6 @@ class Rectangle(Base):
 
     def display(self):
         """Print the Rectangle instance using '#' characters."""
-        [print() for _ in range(self.y)]
-        for _ in range(self.height):
-            print(" " * self.x + "#" * self.width)
+        [print() for i in range(self.__y)]
+        for j in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
