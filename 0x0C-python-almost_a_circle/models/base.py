@@ -45,3 +45,47 @@ class Base:
         with open(filename, 'w') as my_file:
             my_file.write(cls.to_json_string([obj.to_dictionary()
                                               for obj in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Method that returns the list of dictionaries
+        from the JSON string representation.
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Class method that returns an instance with all attributes already set.
+        """
+        if cls.__name__ == 'Rectangle':
+            dummy_shape = cls(1, 1)  # Create a dummy Rectangle instance
+        elif cls.__name__ == 'Square':
+            dummy_shape = cls(1)  # Create a dummy Square instance
+        else:
+            raise ValueError("Unsupported class")
+        dummy_shape.update(**dictionary)
+        return dummy_shape
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Class method that returns a list of instances from a file.
+        """
+        filename = '{}.json'.format(cls.__name__)
+        instances = []
+
+        try:
+            with open(filename, 'r') as file:
+                json_string = file.read()
+                string_list = cls.from_json_string(json_string)
+                for data in string_list:
+                    inst = cls.create(**data)
+                    instances.append(inst)
+        except FileNotFoundError:
+            pass
+
+            return instances
