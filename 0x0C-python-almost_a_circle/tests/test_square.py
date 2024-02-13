@@ -6,6 +6,7 @@ unittest for square class"""
 import unittest
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
     """Test case for the Square class."""
 
@@ -37,6 +38,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.size, 10)
         self.assertEqual(square.width, 10)
         self.assertEqual(square.height, 10)
+
 
 if __name__ == "__main__":
     unittest.main()
