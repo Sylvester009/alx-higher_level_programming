@@ -112,8 +112,8 @@ class Base:
         """
         Deserialize instances from a CSV file.
         """
-        filename = '{}.csv'.format(cls.__name__)
         instances = []
+        filename = '{}.csv'.format(cls.__name__)
 
         try:
             with open(filename, 'r', newline='') as file:
