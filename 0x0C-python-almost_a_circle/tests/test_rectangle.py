@@ -8,6 +8,7 @@ from models.rectangle import Rectangle
 from io import StringIO
 import sys
 
+
 class TestRectangle(unittest.TestCase):
     """Test case for the Rectangle class."""
 
@@ -43,6 +44,7 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(5, 10)
         rect.y = 8
         self.assertEqual(rect.y, 8)
+
 
 if __name__ == "__main__":
     unittest.main()
