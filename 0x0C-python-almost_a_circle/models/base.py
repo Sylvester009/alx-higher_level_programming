@@ -106,30 +106,3 @@ class Base:
                     writer.writerow([i.id, i.width, i.height, i.x, i.y])
                 if cls.__name__ == "Square":
                     writer.writerow([i.id, i.size, i.x, i.y])
-
-    @classmethod
-    def load_from_file_csv(cls):
-        """
-        Deserialize instances from a CSV file.
-        """
-        instances = []
-        filename = '{}.csv'.format(cls.__name__)
-
-        try:
-            with open(filename, 'r', newline='') as file:
-                reader = csv.reader(file)
-                for i in reader:
-                    if cls.__name__ == "Rectangle":
-                        data = {"id": int(i[0]),
-                                "width": int(i[1]),
-                                "height": int(i[2]),
-                                "x": int(i[3]),
-                                "y": int(i[4])}
-                    if cls.__name__ == "Square":
-                        data = {"id": int(i[0]),
-                                "size": int(i[1]),
-                                "x": int(i[2]),
-                                "y": int(i[3])}
-                    inst = cls.create(**data)
-                    instances.append(inst)
-            return instances
