@@ -102,7 +102,10 @@ class Base:
         with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
             for i in list_objs:
-                writer.writerow(i.to_csv_row())
+                if cls.__name__ == "Rectangle":
+                    writer.writerow([i.id, i.width, i.height, i.x, i.y])
+                if cls.__name__ == "Square":
+                    writer.writerow([i.id, i.size, i.x, i.y])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -116,9 +119,17 @@ class Base:
             with open(filename, 'r', newline='') as file:
                 reader = csv.reader(file)
                 for i in reader:
-                    inst = cls.create_from_csv_row(i)
+                    if cls.__name__ == "Rectangle":
+                        data = {"id": int(i[0]),
+                                "width": int(i[1]),
+                                "height": int(i[2]),
+                                "x": int(i[3]),
+                                "y": int(i[4])}
+                    if cls.__name__ == "Square":
+                        data = {"id": int(i[0]),
+                                "size": int(i[1]),
+                                "x": int(i[2]),
+                                "y": int(i[3])}
+                    inst = cls.create(**data)
                     instances.append(inst)
-        except FileNotFoundError:
-            pass  # Return an empty list if the file doesn't exist
-
-        return instances
+            return instances
