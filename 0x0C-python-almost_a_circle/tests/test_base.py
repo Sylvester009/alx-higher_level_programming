@@ -6,6 +6,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase(unittest.TestCase):
     def test_init_with_id(self):
         my_base = Base(10)
@@ -16,6 +17,7 @@ class TestBase(unittest.TestCase):
         my_base2 = Base()
         self.assertEqual(my_base1.id, 3)
         self.assertEqual(my_base2.id, 4)
+
 
 if __name__ == '__main__':
     unittest.main()
