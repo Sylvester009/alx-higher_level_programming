@@ -1,0 +1,5 @@
+-- List all in table
+-- A script that lists all rows of the table first_table
+-- from the database hbtn_0c_0
+
+SHOW ROWS FROM hbtn_0c_0.first_table;
