@@ -4,6 +4,6 @@ class Rectangle {
   constructor () {
     //constructor
   }
-};
+}
 
 module.exports = Rectangle;
