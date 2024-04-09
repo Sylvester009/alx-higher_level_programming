@@ -5,5 +5,4 @@ class Rectangle {
     // Constructor
   }
 }
-
 module.exports = Rectangle;
