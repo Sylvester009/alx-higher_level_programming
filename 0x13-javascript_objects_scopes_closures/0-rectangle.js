@@ -2,6 +2,6 @@
 
 class Rectangle {
   constructor () {
-// constructor
+    //constructor
   }
 };
