@@ -6,4 +6,4 @@ class Rectangle {
     this.height = h;
   }
 }
-modules.export = Rectangle;
+module.exports = Rectangle;
