@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor () {
-    //constructor
+  constructor() {
+    // Constructor
   }
 }
 
