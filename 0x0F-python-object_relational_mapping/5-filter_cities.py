@@ -2,7 +2,7 @@
 """ takes name of a state as an argument and lists all cities"""
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == '__main__':
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
                     cities.state_id=states.id \
                     WHERE states.name=%s", (sys.argv[4],))
     row = cursor.fetchall()
-    print(", ".join(city[0] for city in rows))
+    print(", ".join(list[0] for list in rows))
 
     cur.close()
     db.close()
