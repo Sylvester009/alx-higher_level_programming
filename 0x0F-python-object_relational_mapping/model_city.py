@@ -10,7 +10,7 @@ class City(Base):
     """
     Class City
     """
-  
+
     __tablename__ = 'cities'
     id = Column(Integer, autoincrement=True,
                 nullable=False, primary_key=True)
