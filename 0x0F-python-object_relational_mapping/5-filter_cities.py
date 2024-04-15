@@ -20,7 +20,7 @@ if __name__ == '__main__':
                     cities.state_id=states.id \
                     WHERE states.name=%s", (sys.argv[4],))
     row = cursor.fetchall()
-    print(", ".join(list[0] for list in rows))
+    print(", ".join(state[0] for state in row))
 
-    cur.close()
+    cursor.close()
     db.close()
