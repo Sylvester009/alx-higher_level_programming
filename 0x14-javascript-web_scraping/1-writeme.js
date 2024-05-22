@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// writes a string to a file.
 
 const fileSystem = require('fs');
 
