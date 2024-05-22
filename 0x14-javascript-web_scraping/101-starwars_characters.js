@@ -12,7 +12,7 @@ request.get(url, (error, response, body) => {
   }
 });
 
-function printChars(characters, index) {
+function printChars (characters, index) {
   if (index >= characters.length) return;
 
   request.get(characters[index], (err, resp, body) => {
