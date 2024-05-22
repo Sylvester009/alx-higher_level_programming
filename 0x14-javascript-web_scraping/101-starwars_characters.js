@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Right order
+
 const req = require('request');
 const identity = process.argv[2];
 const url = `https://swapi-api.alx-tools.com/api/films/${identity}`;
